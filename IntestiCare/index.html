@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DII+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo do app">
+                </a>
+            </div>
+
+            <!-- Botão do menu mobile -->
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Navegação -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+                <div class="btn-contato">
+                    <a href="login.html"><button>Login</button></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="texto">
+                    <h1>Cuidar do intestino <span>nunca foi tão fácil</span></h1>
+                    <p>Transforme sua saúde intestinal com um acompanhamento especializado, 
+                        métodos eficazes e resultados duradouros.</p>
+                </div>
+                <div class="imagem">
+                    <img src="img/intestino (2).png" alt="Imagem de intestino">
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="interface">
+            <p>&copy; 2025 IntestiCare. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para abrir/fechar o menu mobile
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".menu").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
