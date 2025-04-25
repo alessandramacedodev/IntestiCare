@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - IntestiCare</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icon-192.png" type="image/png" />
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+    function realizarLogin(e) {
+      e.preventDefault();
+      window.location.href = 'acesso.html';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="logoIC.png" alt="Logo IntestiCare" /></a>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Login</h1>
+    <div class="card">
+      <form onsubmit="realizarLogin(event)">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
+        <p><a href="cadastro.html">Ainda não tem uma conta? Cadastre-se</a></p>
+        
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 IntestiCare. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - IntestiCare</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icon-192.png" type="image/png" />
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+  </script>
+  </head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="logoIC.png" alt="Logo IntestiCare" /></a>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Sobre o IntestiCare</h1>
+    <div class="sobre-container card">
+      <img src="img/intestino-ilustracao.jpg" alt="Ilustração sistema digestivo">
+      <div class="sobre-texto">
+        <p>O IntestiCare é um aplicativo voltado para a conscientização, acompanhamento e promoção da saúde intestinal.</p>
+        <p>Nosso objetivo é ajudar você a entender melhor seu sistema digestivo, identificar sintomas, organizar sua rotina alimentar e manter hábitos que promovam bem-estar.</p>
+        <p>O app oferece funcionalidades como:</p>
+        <ul>
+          <li>Registro diário de sintomas </li>
+          <li>Alertas e lembretes para hidratação, alimentação e medicamentos</li>
+          <li>Dicas personalizadas baseadas no seu histórico</li>
+          <li>Acesso a conteúdos informativos e orientações de especialistas</li>
+        </ul>
+        <p>Com o IntestiCare, você tem mais controle e qualidade de vida, com um aplicativo acessível tanto no desktop quanto no celular.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 IntestiCare. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

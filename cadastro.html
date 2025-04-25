@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - IntestiCare</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="logoIC.png" alt="Logo IntestiCare" /></a>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Cadastro</h2>
+    <form id="cadastro-form">
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="senha" placeholder="Senha" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p id="mensagem"></p>
+  </main>
+
+  <script>
+    const form = document.getElementById('cadastro-form');
+    const mensagem = document.getElementById('mensagem');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const dados = Object.fromEntries(new FormData(form));
+
+      const res = await fetch('/api/cadastro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+      });
+
+      const resultado = await res.json();
+      mensagem.textContent = resultado.mensagem;
+      mensagem.style.color = resultado.sucesso ? 'green' : 'red';
+    });
+
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

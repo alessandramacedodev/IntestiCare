@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   IntestiCare - Cuide do seu intestino
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="manifest.json" rel="manifest"/>
+  <link href="images/icon-192.png" rel="icon" type="image/png"/>
+  <script>
+function toggleMenu() {
+  document.querySelector('.navbar').classList.toggle('active');
+}
+</script>
+ </head>
+ <body>
+  <header>
+   <a class="logo" href="index.html">
+    <img alt="Logo IntestiCare" src="logoIC.png"/>
+   </a>
+   <button class="nav-toggle" onclick="toggleMenu()">
+    ☰
+   </button>
+   <nav class="navbar">
+    <ul class="nav-links">
+     <li>
+      <a href="index.html">
+       Início
+      </a>
+     </li>
+     <li>
+      <a href="sobre.html">
+       Sobre
+      </a>
+     </li>
+     <li>
+      <a href="contato.html">
+       Contato
+      </a>
+     </li>
+     <li>
+      <a href="login.html">Login
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main>
+   <h1>
+    Bem-vindo ao IntestiCare
+   </h1>
+   <p>
+    Seu aplicativo para cuidar da saúde intestinal com tecnologia e conhecimento com foco nas seguintes doenças:
+   </p>
+   
+
+<div class="container">
+ 
+  <div class="grid">
+    <div class="card">
+      <h2>SIBO</h2>
+      <p>Excesso de bactérias no intestino delgado, causando inchaço e desconforto.</p>
+    </div>
+    <div class="card">
+      <h2>SIFO</h2>
+      <p>Crescimento anormal de fungos no intestino delgado, como a Candida.</p>
+    </div>
+    <div class="card">
+      <h2>SII</h2>
+      <p>Dor abdominal, constipação e/ou diarreia sem causa orgânica visível.</p>
+    </div>
+    <div class="card">
+      <h2>DII</h2>
+      <p>Inclui Doença de Crohn e Retocolite Ulcerativa com inflamações crônicas.</p>
+    </div>
+    <div class="card">
+      <h2>Câncer do Intestino</h2>
+      <p>Acomete intestino grosso ou reto, com sintomas como sangue nas fezes.</p>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+  <footer>
+   © 2025 IntestiCare. Todos os direitos reservados.
+   
+  </footer>
+  <script>
+   fetch('/api/info')
+  .then(res => res.json())
+  .then(data => {
+    const infoDiv = document.createElement('div');
+    infoDiv.innerHTML = `<strong>${data.nome}</strong><p>${data.descricao}</p><p>Contato: ${data.contato}</p>`;
+    document.body.appendChild(infoDiv);
+  });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(reg => console.log("Service Worker registrado!", reg))
+    .catch(err => console.error("Erro ao registrar o Service Worker:", err));
+}
+  </script>
+ </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - IntestiCare</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="images/icon-192.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+
+    function realizarLogin(e) {
+      e.preventDefault();
+      window.location.href = 'acesso.html';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="logoIC.png" alt="Logo IntestiCare" /></a>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Área do Usuário</h1>
+      <div class="card">
+        <h2>Seja bem-vindo ao IntestiCare</h2>
+        <p>Aqui você poderá:</p>
+        <ul style="text-align: left;">
+          <li>Registrar sintomas e eventos intestinais do dia a dia</li>
+          <li>Acompanhar sua saúde digestiva com gráficos e alertas</li>
+          <li>Receber dicas de alimentação e bem-estar personalizadas</li>
+          <li>Agendar consultas com especialistas parceiros</li>
+        </ul>
+        <p>Nosso objetivo é proporcionar bem-estar e controle para quem busca entender melhor seu corpo.</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <h1>Escolha uma das opções</h1>
+      <div class="card-container">
+        <div class="card">
+          <div class="icon">
+            <i class="bi bi-book" style="font-size: 2rem;"></i>
+          </div>
+          <h2>Diário do Intestino</h2>
+          <p>Monitore sua saúde intestinal. Responda perguntas diárias e acompanhe seu progresso por gráficos.</p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="bi bi-pencil-square" style="font-size: 2rem;"></i>
+          </div>
+          <h2>Registro de Sintomas</h2>
+          <p>Registre sintomas para facilitar o acompanhamento médico e entender seu corpo melhor.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 IntestiCare. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
